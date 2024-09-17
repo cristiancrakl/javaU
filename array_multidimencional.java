@@ -8,6 +8,7 @@ public class array_multidimencional {
 
         int valor = matriz [2][3];//por la matriz sacar un valor de ella
 
+        System.out.println(valor);
 
 
 
