@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class arreglos_unidimensionales_vectores1 {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         // inicializar el scanner
