@@ -1,22 +1,26 @@
+import java.util.Scanner;
+
 public class arreglos_unidimensionales_vectores1 {
 
     public static void main(String[] args) {
 
+        // inicializar el scanner
+        Scanner scanner = new Scanner(System.in);
+
         // asignacion para vector
         int vector1[] = new int[5];
 
-        // guardar elementos en vector
-        vector1[0] = 5000;
-        vector1[1] = 1550;
-        vector1[2] = 1590;
-        vector1[3] = 1300;
-        vector1[4] = 1600;
+        // guardar datos en un vector
+        for (int posicion = 0; posicion < vector1.length; posicion++) {
+            System.out.println("ingrese el valor en la posicion: " + posicion);
+            vector1[posicion] = scanner.nextInt();
+        }
 
-        System.out.println(vector1[1]);
-        System.out.println(vector1[4]);
+        // recorrer el vector para mostrar en pantalla
+        for (int posicion = 0; posicion < vector1.length; posicion++) {
+            System.out.println("el valor almacenado en la posicion " + posicion + " es: " + vector1[posicion]);
 
-        vector1[1] = 5600;
-        System.out.println(vector1[1]);
+        }
 
     }
 
