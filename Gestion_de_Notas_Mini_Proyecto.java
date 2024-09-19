@@ -23,8 +23,6 @@ public class Gestion_de_Notas_Mini_Proyecto {
        
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
             
-
-
             if (posicion==0) {
                 Nombres[0]=scanner.nextLine();
             }
@@ -51,7 +49,7 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
                 for (int j = 0; j < 3; j++) {
              
-                System.out.print("Escriba la nota numero: " + (j+1)+"del estudiante"+Nombres[i]);
+                System.out.print("Escriba la nota numero: " + (j+1)+" del estudiante "+Nombres[i]);
                 Notas[j] = scanner.nextFloat();
                 notasAcumulacion += Notas[j];
                 }
