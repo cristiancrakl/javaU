@@ -1,52 +1,63 @@
-import java.util.Scanner;
+import java.util.Scanner;//importamos el scanner
 
 public class Gestion_de_Notas_Mini_Proyecto {
-    
+
     public static void main(String[] args) {
         @SuppressWarnings("resource")
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Escriba el numero de estudiantes");
-        int estudiantesNum = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);//inicializamos el scanner para poder utilizarlo
 
-        String names[] = new String[estudiantesNum];
-        int Identificacion[] = new int[estudiantesNum];
-        double Notas[] = new double[3];
-        double Promedio[] = new double[estudiantesNum];
+        System.out.println("Escriba el numero de estudiantes");//mostramos en pantalla al usuario para que ingrese el numero de los estudiantes
+        int estudiantesNum = scanner.nextInt();//ponemos el escaner para que nos lea el numero de estudiantes
 
-        for (int i = 0; i < estudiantesNum; i++) {
-            double notaAcumulacion = 0;
+        String Nombres[] = new String[estudiantesNum];//inicializamos un vector para que tenga guardado el nombre de los estudiantes deacuerdo al numero de estudiantes que haya
+        int Identificacion[] = new int[estudiantesNum];//inicializamos un vector para guardar el numero de identificacion de los estudiantes teniendo en cuenta el numero de estudiantes
+        float Notas[] = new float[3];//inicializamos un vector para guardar las 3 notas por cada estudiante
+        float Promedio[] = new float[estudiantesNum];//inicializamos un vector de tipo duble para guardar el promedio 
 
-            System.out.println("Escriba el nombre del estudiante numero: " + i);
+        
+        
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) {
+            System.out.println("Escriba el nombre del estudiante numero: " + posicion);
 
-            names[i] = scanner.nextLine();
-            System.out.println(names[i]);
+            Nombres[posicion] = scanner.nextLine();
+            System.out.println(Nombres[posicion]);
+        }
+        
+        
+        
+        
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) {
+            float notasAcumulacion = 0;
 
-            System.out.println("Escriba la identificacion del estudiante numero: " + i);
+            
 
-            Identificacion[i] = scanner.nextInt();
+            System.out.println("Escriba la identificacion del estudiante numero: " + posicion);
+
+            Identificacion[posicion] = scanner.nextInt();
 
             for (int j = 0; j < 3; j++) {
 
-                System.out.println("Escriba la nota numero: " + j + "  del estudiante " + i);
-                Notas[j] = scanner.nextInt();
-                notaAcumulacion += Notas[j];
+                System.out.println("Escriba la nota numero: " + j + "  del estudiante " + posicion);
+                Notas[j] = scanner.nextFloat();
+                notasAcumulacion += Notas[j];
 
             }
 
-            Promedio[i] = notaAcumulacion / 3;
+            Promedio[posicion] = notasAcumulacion / 3;
         }
 
-        for (int i = 0; i < estudiantesNum; i++) {
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) {
 
-            if (Promedio[i] > 3.0) {
+            if (Promedio[posicion] > 3.0) {
 
-                System.out.println("Estudiante: " + names[i] + "  (ID: " + Identificacion[i] + ")  Promedio: "
-                        + Promedio[i] + " - Aprobado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
+                        + Promedio[posicion] + " - Aprobado");
 
             } else {
 
-                System.out.println("Estudiante: " + names[i] + "  (ID: " + Identificacion[i] + ")  Promedio: " + Promedio[i] + " - Reprovado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
+                        + Promedio[posicion] + " - Reprovado");
             }
         }
     }
