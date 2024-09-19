@@ -18,7 +18,9 @@ public class Gestion_de_Notas_Mini_Proyecto {
         float Promedio[] = new float[estudiantesNum];//inicializamos un vector de tipo duble para guardar el promedio 
 
         
-        for (int posicion = 0; posicion < estudiantesNum; posicion++) {
+        
+        
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) { //recorremos de posicion el array para ingresar los datos de los nombres en el
             
             System.out.println("");
             if (posicion==0) {
