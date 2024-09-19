@@ -46,12 +46,18 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
             Identificacion[posicion] = scanner.nextInt();
 
-            for (int j = 0; j < 3; j++) {
+            for (int i = 0; i < estudiantesNum; i++) {
 
-                System.out.println("Escriba la nota numero: " + (j+1) + "  del estudiante " + Nombres[j]);
+
+                for (int j = 0; j < 3; j++) {
+             
+                System.out.print("Escriba la nota numero: " + (j+1)+"del estudiante"+Nombres[i]);
                 Notas[j] = scanner.nextFloat();
                 notasAcumulacion += Notas[j];
+                }
+                
 
+                System.out.println("");
             }
 
             Promedio[posicion] = notasAcumulacion / 3;
@@ -59,7 +65,7 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
 
-            if (Promedio[posicion] >= 3.0) {
+            if (Promedio[posicion] >= 3) {
 
                 System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
                         + Promedio[posicion] + " - Aprobado");
