@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Gestion_de_Notas_Mini_Proyecto {
+    
     public static void main(String[] args) {
         @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
