@@ -10,6 +10,8 @@ public class Gestion_de_Notas_Mini_Proyecto {
         System.out.println("Escriba el numero de estudiantes");//mostramos en pantalla al usuario para que ingrese el numero de los estudiantes
         int estudiantesNum = scanner.nextInt();//ponemos el escaner para que nos lea el numero de estudiantes
 
+        
+        //declarar los arrays donde se van a almacenar los datos
         String Nombres[] = new String[estudiantesNum];//inicializamos un vector para que tenga guardado el nombre de los estudiantes deacuerdo al numero de estudiantes que haya
         int Identificacion[] = new int[estudiantesNum];//inicializamos un vector para guardar el numero de identificacion de los estudiantes teniendo en cuenta el numero de estudiantes
         float Notas[] = new float[3];//inicializamos un vector para guardar las 3 notas por cada estudiante
@@ -17,11 +19,19 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
         
         
+        
+       
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
-            System.out.println("Escriba el nombre del estudiante numero: " + posicion);
+            
 
+
+            if (posicion==0) {
+                Nombres[0]=scanner.nextLine();
+            }
+
+            System.out.println("Escriba el nombre del estudiante numero: " + (posicion+1));
             Nombres[posicion] = scanner.nextLine();
-            System.out.println(Nombres[posicion]);
+            
         }
         
         
@@ -32,13 +42,13 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
             
 
-            System.out.println("Escriba la identificacion del estudiante numero: " + posicion);
+            System.out.println("Escriba la identificacion del estudiante:  " + Nombres[posicion]);
 
             Identificacion[posicion] = scanner.nextInt();
 
             for (int j = 0; j < 3; j++) {
 
-                System.out.println("Escriba la nota numero: " + j + "  del estudiante " + posicion);
+                System.out.println("Escriba la nota numero: " + (j+1) + "  del estudiante " + Nombres[j]);
                 Notas[j] = scanner.nextFloat();
                 notasAcumulacion += Notas[j];
 
@@ -49,7 +59,7 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
 
-            if (Promedio[posicion] > 3.0) {
+            if (Promedio[posicion] >= 3.0) {
 
                 System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
                         + Promedio[posicion] + " - Aprobado");
