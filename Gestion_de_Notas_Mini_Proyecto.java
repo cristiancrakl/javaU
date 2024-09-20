@@ -42,8 +42,6 @@ public class Gestion_de_Notas_Mini_Proyecto {
         }
         
         
-        
-        
         for (int posicion = 0; posicion < estudiantesNum; posicion++) { //ciclo for para ingrasr los datos de las notas
             
             float notasAcumulacion = 0;
