@@ -35,11 +35,12 @@ public class Gestion_de_Notas_Mini_Proyecto {
         
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
             
+            System.out.println("");
             float notasAcumulacion = 0;
             System.out.println("Escriba la identificacion del estudiante:  " + Nombres[posicion]);
-
             Identificacion[posicion] = scanner.nextInt();
 
+            
             for (int j = 0; j < 3; j++) {
              
                 System.out.print("Escriba la nota numero " + (j+1)+" del estudiante "+Nombres[posicion]+":");
@@ -50,17 +51,18 @@ public class Gestion_de_Notas_Mini_Proyecto {
             Promedio[posicion] = notasAcumulacion / 3;
         }
 
+        
+        
         for (int posicion = 0; posicion < estudiantesNum; posicion++) {
 
+            System.out.println("");
             if (Promedio[posicion] >= 3) {
 
-                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
-                        + Promedio[posicion] + " - Aprobado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "+ Promedio[posicion] + " - Aprobado");
 
             } else {
 
-                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "
-                        + Promedio[posicion] + " - Reprovado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion] + ")  Promedio: "+ Promedio[posicion] + " - Reprovado");
             }
         }
     }
