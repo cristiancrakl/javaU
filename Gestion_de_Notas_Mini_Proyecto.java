@@ -18,9 +18,7 @@ public class Gestion_de_Notas_Mini_Proyecto {
         float Promedio[] = new float[estudiantesNum];//inicializamos un vector de tipo duble para guardar el promedio 
 
         
-        
-        
-        for (int posicion = 0; posicion < estudiantesNum; posicion++) { //recorremos de posicion el array para ingresar los datos de los nombres en el
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) {
             
             System.out.println("");
             if (posicion==0) {
@@ -42,19 +40,12 @@ public class Gestion_de_Notas_Mini_Proyecto {
 
             Identificacion[posicion] = scanner.nextInt();
 
-            for (int i = 0; i < estudiantesNum; i++) {
-
-
-                for (int j = 0; j < 3; j++) {
+            for (int j = 0; j < 3; j++) {
              
-                System.out.print("Escriba la nota numero " + (j+1)+" del estudiante "+Nombres[i]+":");
+                System.out.print("Escriba la nota numero " + (j+1)+" del estudiante "+Nombres[posicion]+":");
                 Notas[j] = scanner.nextFloat();
                 notasAcumulacion += Notas[j];
                 }
-                
-
-                System.out.println("");
-            }
 
             Promedio[posicion] = notasAcumulacion / 3;
         }
