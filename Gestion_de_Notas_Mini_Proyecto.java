@@ -24,8 +24,7 @@ public class Gestion_de_Notas_Mini_Proyecto {
         float Promedio[] = new float[estudiantesNum];// inicializamos un vector de tipo duble para guardar el promedio
         System.out.println("");
 
-        for (int posicion = 0; posicion < estudiantesNum; posicion++) {// ciclo for para ingresar los datos en el array
-                                                                       // de nombre
+        for (int posicion = 0; posicion < estudiantesNum; posicion++) {// ciclo for para ingresar los datos en el array de nombre
 
             if (posicion == 0) {// esto es para solucionar un problema que tenia porque no
                 Nombres[0] = scanner.nextLine();
@@ -72,13 +71,11 @@ public class Gestion_de_Notas_Mini_Proyecto {
             System.out.println("");
             if (Promedio[posicion] >= NotaMinimaParaAprobar) {//para validar si el estudiante en la posicion aprobo o reprobo segun su promedio
 
-                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion]
-                        + ")  Promedio: " + Promedio[posicion] + " - Aprobado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion]+ ")  Promedio: " + Promedio[posicion] + " - Aprobado");
 
             } else {
 
-                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion]
-                        + ")  Promedio: " + Promedio[posicion] + " - Reprovado");
+                System.out.println("Estudiante: " + Nombres[posicion] + "  (ID: " + Identificacion[posicion]+ ")  Promedio: " + Promedio[posicion] + " - Reprovado");
             }
         }
     }
