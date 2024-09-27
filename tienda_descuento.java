@@ -2,8 +2,9 @@ public class tienda_descuento {
     public static void main(String[] args) {
        
 
-        double precioCamisa = 25.0;
-        double precioPantalon = 30.0;
+        //inicializacion de variables
+        final double precioCamisa = 25.0;
+        final double precioPantalon = 30.0;
 
        
         double descuento15 = 0.15;
