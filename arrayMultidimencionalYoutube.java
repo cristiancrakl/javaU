@@ -26,7 +26,7 @@ public class arrayMultidimencionalYoutube {
                 System.out.println("es de:" + matriz[f][c]);
                 System.out.println("");
             }
-            
+
             System.out.println("");
         }
 
