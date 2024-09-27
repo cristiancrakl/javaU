@@ -10,10 +10,10 @@ public class BreakAndContinues {
         
         int numeros[] =new int[2] ;
 
-        for (int i = 0; i < 2; i++) {
+        for (int numero=0;numero<numeros.length;numero++) {
 
-            System.out.println("ingrese el dato de la posicion "+i );
-            numeros[i]=scanner.nextInt();
+            System.out.println("ingrese el dato de la posicion "+(numero+1));
+            numeros[numero]=scanner.nextInt();
             
         }
 
